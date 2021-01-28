@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head style="text-align:center">
+    <title>News</title>
+
+    <h1> Dog News</h1>
+    <hr>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 500px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+
+
+
+<body>
+
+    <h2>Suscribe and get a free dog today</h2>
+    <img src="/ex_7/imgs/dogs/thumbs/dog_1.jpg" height="60px">
+    <hr>
+    <nav style="display: flex; justify-content: space-around">
+
+
+        <span>Big Dogs</span>
+        <span>Small Dogs</span>
+        <span>Pruple Dogs</span>
+
+
+    </nav>
+    <div class="row">
+        <div class="column" style="background-color:green;">
+            <h2>Column 1</h2>
+            <form>
+                <label for="name">Put your name and age </label>
+                <input type="text" name="name" pattern="^[a-zA-Z]+$" placeholder="name" title="Input only letters" />
+                <input type="text" name="age" pattern="\d+" placeholder="age" title="Input only numbers" />
+                <input type="submit" value="Submit">
+            </form>
+            <nav>
+                <ul>
+                    <li><a href="/ex_7/index.html">Home</a></li>
+                    <li><a href="bio.html">Bio</a></li>
+                </ul>
+            </nav>
+            <aside>
+                <p>Look at these amazing Dogs</p>
+            </aside>
+            
+            <img src="/ex_7/imgs/dogs/dog_1.jpg" height="100px" />
+            <img src="/ex_7/imgs/dogs/dog_2.jpg" height="100px" />
+            <img src="/ex_7/imgs/dogs/dog_3.jpg" height="100px" />
+            <p>Wow</p>
+
+        </div>
+        <div class="column" style="background-color:blue;">
+            <h2>Column 2</h2>
+            <section>
+                <h1>Section Main Title</h1>
+                <p>Section Content</p>
+            </section>
+            <article class="forecast">
+                <p>These are  real dogs </p>
+                
+                
+                <ul>
+
+                    <li> <a href="/ex_7/imgs/dogs/dog_1.jpg">Dog_1</a></li>
+                    <li> <a href="/ex_7/imgs/dogs/dog_2.jpg">Dog_2</a></li>
+                    <li> <a href="/ex_7/imgs/dogs/dog_3.jpg">Dog_3</a></li>
+                </ul>
+            </article>
+
+            <iframe src="form.html" height="200" width="200" seamless frameborder="0"></iframe>
+            <p>Some text..</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

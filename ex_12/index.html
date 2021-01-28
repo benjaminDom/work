@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create User</title>
+</head>
+
+<body>
+    <h>Create User</h>
+    <hr>
+    <form action="create_user.html" method="get" enctype="application/x-www-form-urlencoded">
+        <label for="username">Username:</label>
+        <input type="text" name="username" value="name1" placeholder="username" maxlength="12" size="30">
+
+        <fieldset>
+            <legend>User Form</legend>
+            <label>Name:</label>
+            <input type="text" name="name" />
+            <label>Surname:</label>
+            <input type="text" name="surname" />
+
+            <label for="password">password</label>
+            <input type="password" name="varname" value="pass" placeholder="12345678910" size="30" maxlength="8">
+            <br>
+
+        </fieldset>
+
+
+
+
+        Select your favourite superhero
+        <div><input type="radio" name="superhero"  checked="checked" value="Superman"> Superman</div>
+
+        <div><input type="radio" name="superhero" value="Batman" > Batman</div>
+        <input type="radio" name="superhero" value="Fash" > Flash
+        <!-- <input type="radio" name="jetsfan" value="true" checked> Oh Yeahhhhhh, Go Jets!!! -->
+
+
+        Select your favourite Video Game
+        <div><input type="checkbox" name="videogames" value="fifa" checked="checked"> <label
+                for="videogames">FIFA</label></div>
+        <div><input type="checkbox" name="videogames" value="NHL" checked> NHL</div>
+        <div> <input type="checkbox" name="videogames" value="Resident EVil">rESIDENT eVIL</div>
+
+
+
+
+        <input type="hidden" name="userid" value="2300">
+
+        <input type="image" id="image" name="Login" alt="Login" height="70px" src="./img/register_button.png">
+        <!--<img src="./img/register_button.png" height="70px">-->
+    </form>
+</body>
+
+</html>
