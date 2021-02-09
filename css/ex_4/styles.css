@@ -1,0 +1,8 @@
+*{ color:green;}
+
+#login{ color:grey;}
+.red{color: red;}
+label,input{ color: pink;}
+input[type="submit"]{color:brown;}
+
+

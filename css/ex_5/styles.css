@@ -1,0 +1,23 @@
+/* Select the paragraph elements that are direct children from a div element*/
+a:link {
+    color: red;
+  }
+  a:link:hover {
+    color: orange;
+  }
+  a:visited {
+    color: purple;
+
+  }
+  header h1 {
+    color: lime;
+  }
+  section h1 {
+    color: coral;
+  }
+   h1::first-letter {
+    color: black;
+  }
+  p+p{ color: goldenrod;}
+
+  li ~ li{ color:deeppink;}
