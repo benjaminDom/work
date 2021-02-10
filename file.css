@@ -18,3 +18,11 @@
   width: 300px;
   height: 300px;
 }
+h1 {
+  font-size: 2em;
+  color: #ddd;
+  text-shadow: 1px 2px 3px #666;
+  text-transform: uppercase;
+  text-align: center;
+}
+li{font-family:'Merriweather', serif; font-size: 1.6em; color: purple;}
