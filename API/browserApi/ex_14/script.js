@@ -1,0 +1,1 @@
+window.alert('once the document is loaded');
