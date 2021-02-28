@@ -13,7 +13,5 @@ while(isAdult) {
 
 let average=sum/count;
 
-window.alert('The FINAL  sum  is '+`${sum}`);
-window.alert(`The user input ${count} numbers`);
-window.alert(`The average is: ${average}`);
-
+window.alert('The FINAL  sum  is '+`${sum} , The user input ${count} numbers, The average is: ${average}`);
+ 

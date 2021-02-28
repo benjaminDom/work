@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Running from my local server</title>
+
+    <script>
+let number=window.prompt("how many second would  you like to   be in our site ?");
+
+const greet = function() {
+ 
+
+console.log(`you have ${number} seconds remaining on   this  page `);
+number--;
+if(number==0){
+
+    clearInterval(id);
+    window.alert("Your session has expired, come again soon!");
+}
+
+}
+
+
+
+
+
+let id= setInterval(greet,1000);
+
+
+
+    </script>
+
+</head>
+
+
+<body>
+    <h1>Hello everyone </h1>
+    <p>we are using a live server </p>
+    <style>
+        h1 {
+            color: green;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+    </style>
+
+
+</body>
+
+</html>

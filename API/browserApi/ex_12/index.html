@@ -4,7 +4,21 @@
 <head>
     <title>Running from my local server</title>
 
-<script src="script.js" defer ></script>
+    <script>
+ let cont=0;
+ const greet = function(name, nickname) {
+  console.log(`hi ${name} ${nickname}`);
+cont++;
+console.log(`${cont} seconds passed sinc  you opened  this  page `);
+}
+
+const id=setInterval(greet, 1000, 'Marta', 'Martita');
+
+
+/* clearInterval(id); */
+       
+
+    </script>
 
 </head>
 
