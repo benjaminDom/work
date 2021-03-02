@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Texts</title>
+  <script>
+      window.onload=function(){
+          let elementh=document.querySelector('h1');
+        let elementhText= elementh.innerText;
+        console.log(elementh.innerText);
+        let elementp=document.querySelector('p');
+        console.log(elementp.textContent);
+        let ptext=elementp.textContent;
+        elementh.innerText=ptext;
+
+        elementp.innerText=elementhText;
+
+    /*     let elementp=document.querySelector('p');
+        let elementpText= elementp.innerText;
+        elementh.innerText=elementpText;
+        let elementt=document.querySelector('title');
+        
+        elementpText=elementt.innerText; */
+
+      }
+  </script>
+</head>
+<body>
+  <h1>Main Title</h1>
+  <p>This is a paragraph</p>
+</body>
+</html>
