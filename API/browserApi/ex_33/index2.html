@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+
+    <script>
+        window.onload=function(){
+            const button = document.getElementById("firstButton");
+            const button2 = document.getElementById("secondButton");
+            
+            let clickHandler=function(){
+                alert('this  is  an event  listenet ');
+            }
+
+            let clickHandler2=function(){
+                button.removeEventListener('click',clickHandler)
+                alert('this is click handler 2  ');    
+                    }
+
+            button.addEventListener('click',clickHandler);
+            button2.removeEventListener('click',clickHandler2);
+            
+       }
+   </script>
+
+  </body>
+</html>

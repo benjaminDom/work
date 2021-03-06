@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+      window.onload = () => {
+        let firstButton = document.querySelector("button");
+        let secondButton = document.getElementById("secondButton");
+
+        const clickHandler = () => {
+          alert("You clicked an event listened element");
+        };
+
+        const removeHandler = () => {
+          firstButton.removeEventListener("click", clickHandler);
+        };
+
+        firstButton.addEventListener("click", clickHandler);
+
+        secondButton.addEventListener("mouseover", removeHandler);
+      };
+    </script>
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

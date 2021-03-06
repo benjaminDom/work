@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        window.onload = function () {
+            let body = document.querySelector('body');
+            let names = ['ben', 'gabo', 'mariano', 'raul', 'pedro'];
+            let ul = document.createElement('ul');
+           
+            names.forEach(element => {
+               
+           
+                let li = document.createElement('li');
+                li.innerText=element;
+                ul.appendChild(li);
+               
+            });
+            document.body.append(ul);
+
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <div></div>
+    <button>Click me please!!</button>
+    <script>
+      window.onload = function () {
+        const button = document.querySelector("button");
+
+        function clickHandler() {
+          console.log(this); // this is the button that we clicked
+          this.style.backgroundColor = "green";
+        }
+
+        function dblclickHandler() {
+          this.style.backgroundColor = "red";
+        
+    }
+
+    button.addEventListener('click', clickHandler);
+    button.addEventListener('dblclick', dblclickHandler);
+
+
+      };
+    </script>
+  </body>
+</html>

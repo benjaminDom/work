@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <a href="contact.html">Go to contact page</a>
+
+    <script>
+      window.onload = function () {
+        let link = document.querySelector("a");
+        link.addEventListener("click", function (event) {
+          event.preventDefault(); // by calling preventDefault the event is not going to trigger the default behaivour
+          alert("This link doesn't send us to a differen page as we're preventing the default behaviour");
+        });
+      };
+    </script>
+  </body>
+</html>

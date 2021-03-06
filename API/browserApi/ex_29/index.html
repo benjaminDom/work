@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Products</title>
+    <script>
+        window.onload=function(){
+            let ul=document.querySelector('ul');  
+            
+          
+        
+            let l=ul.getElementsByTagName('li').length;
+            for (let index = 0; index < l; index++) {
+                ul.removeChild(ul.childNodes[index+1]);
+                                            }
+ 
+       }
+   </script>
+
+  </head>
+  <body>
+    <ul>
+      <li>Bannana</li>
+      <li>Apple</li>
+      <li>Peach</li>
+      <li>Eggs</li>
+      <li>Tomatto</li>
+      <li>Lettuce</li>
+      <li>Milk</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+      window.onload = function () {
+        let body = document.querySelector("body");
+        let numbers = [];
+        for (let index = 0; index < 100; index++) {
+          numbers[index] = index + 1;
+          console.log(
+            `This  is the number[${index}] is equal  to =${numbers[index]}`
+          );
+        }
+        let ul = document.createElement("ul");
+
+        numbers.forEach((element) => {
+          let li = document.createElement("li");
+          li.innerText = "Item" + element + "as li  element content";
+          if (element % 2 == 0) {
+            li.style.color = "red";
+          } else {
+            li.style.color = "green";
+          }
+          ul.appendChild(li);
+        });
+        document.body.append(ul);
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
