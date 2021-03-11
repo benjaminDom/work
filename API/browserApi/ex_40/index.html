@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+    <script>
+      window.onload = function () {
+        let body = document.querySelector("body");
+        let link=document.querySelector('a'); 
+        let button=document.getElementById('firstButton');
+        let div=document.querySelector('div');
+        let count=0;
+        button.onmouseover=function(){
+            count++;
+            
+              if(count==1){button.style.backgroundColor='red';}
+            else if(count==2){button.style.backgroundColor='blue';}
+            else if(count==3) {button.style.backgroundColor='green';}
+            else if(count==4) {button.style.backgroundColor='gray';}
+            else if(count=>5) {button.style.backgroundColor='white';}
+            div.innerHTML=`this is the count ${count}`;
+            
+        }
+        button.onmouseout=function(){
+            div.innerHTML=`The link background color is: ${button.style.backgroundColor}`;
+        }
+        document.body.appendChild(button);
+        document.body.appendChild(div);
+
+      } 
+
+
+    </script>
+  </body>
+</html>

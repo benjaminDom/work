@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <style>
+      .striked {
+        text-decoration: line-through;
+      }
+
+      li {
+        cursor: pointer;
+      }
+    </style>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+    <script>
+      window.onload = function () {
+        let body = document.querySelector("body");
+        let ul = document.createElement("ul");
+        let weekleyChores = [
+          "read",
+          "sleep",
+          "prepare food",
+          "go for groceies",
+        ];
+        weekleyChores.forEach((element) => {
+          let li = document.createElement("li");
+          li.textContent = element;
+          console.log(li);
+          li.addEventListener('click',function(even){
+            li.classList.toggle("striked");
+
+
+          });
+          ul.appendChild(li); 
+                      
+
+        });
+
+       
+
+        document.body.appendChild(ul);
+      };
+    </script>
+  </body>
+</html>

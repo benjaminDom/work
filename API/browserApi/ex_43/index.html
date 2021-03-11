@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Properties</title>
+  </head>
+  <body>
+    <form
+      action="save_user.html"
+      method="post"
+      enctype="application/x-www-form-urlencoded"
+      name="login"
+    >
+      <input type="text" id="username" name="username" />
+      <input type="password" id="pass" name="pass" />
+      <input type="submit" name="submit" value="Send" />
+    </form>
+    <script defer>
+      window.onload = function () {
+        let body = document.querySelector("body");
+        let form = document.querySelector("form");
+
+        console.log(form.name);
+
+        let action = form.action;
+        let method = form.method;
+        let enctype = form.enctype;
+        let name = form.name;
+
+        const div = document.querySelector("div");
+        div.innerText =
+          "Action: " +
+          action +
+          " Method: " +
+          method +
+          " Enctype: " +
+          enctype +
+          " Name: " +
+          name;
+      };
+    </script>
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script defer>
+        window.onload=function(){
+        let body=document.querySelector('body');
+        let first=document.getElementById('firstButton');
+        let div=document.querySelector('div');
+        var count=0;
+        first.addEventListener('click',function(event){
+         count++;
+         div.innerHTML=`the number  of double clicks is  ${count} `;   
+
+        });
+        document.body.appendChild(div);
+       }
+   </script>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

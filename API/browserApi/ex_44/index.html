@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Properties</title>
+    <script defer>
+      window.onload = function () {
+        let body = document.querySelector("body");
+        let form = document.querySelector("form");
+        let button = document.querySelector("button");
+        const div = document.querySelector("div");
+        /* let action = form.action;
+        let method = form.method;
+        let enctype = form.enctype;
+        let name = form.name; */
+
+        button.onclick = function () {
+          let username = form.elements[0].value;
+          let password = form.elements[1].value;
+          console.log(form.elements[0]);
+          div.innerText = username + " " + password;
+
+          document.body.appendChild(div);
+
+          alert(`the username  is ${username} and the pasword  is ${password}`);
+        };
+        form.onsubmit = function (event) {
+          event.preventDefault();
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <form
+      action="save_user.html"
+      method="post"
+      enctype="application/x-www-form-urlencoded"
+      name="login"
+    >
+      <input type="text" id="username" name="username" />
+      <input type="password" id="pass" name="pass" />
+      <button>Show Username and Password</button>
+    </form>
+    <div></div>
+  </body>
+</html>
