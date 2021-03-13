@@ -1,0 +1,13 @@
+{
+  "name": "ex_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test1",
+    "start":"node index.js"
+
+  },
+  "author": "",
+  "license": "ISC"
+}

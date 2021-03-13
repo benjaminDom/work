@@ -1,0 +1,19 @@
+{
+  "name": "learning_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js",
+    "uglify": "uglifyjs index.js --output script.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.13.1"
+  }
+}
