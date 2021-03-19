@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Checkbox</title>
+</head>
+
+<body>
+    <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+        <input type="checkbox" name="superheroe" value="Wolverine"> Wolverine
+        <input type="checkbox" name="superheroe" value="The Invisible Woman"> The Invisible Woman
+        <input type="checkbox" name="superheroe" value="Iron Man"> Iron Man
+        <input type="checkbox" name="superheroe" value="Superman"> Superman
+        <input type="checkbox" name="superheroe" value=""> Daredevil
+        <input type="checkbox" name="superheroe" value="The Flash"> The Flash
+        <input type="checkbox" name="superheroe" value="Captain America"> Captain America
+        <input type="checkbox" name="superheroe" value="Wonder Woman"> Wonder Woman
+        <input type="checkbox" name="superheroe" value="Spider-Man"> Spider-Man
+        <input type="checkbox" name="superheroe" value="Batman"> Batman
+        <input type="submit" name="submit" value="Submit" />
+    </form>
+    <script>
+        window.onload = function () {
+            let form = document.querySelector("form");
+            form.onsubmit = (event) => {
+                event.preventDefault();
+                const selected = document.querySelectorAll('input:checked');
+                /* console.log('selected object', selected[0].value);
+                console.log('selected length', selected.length);
+ */                if(selected.length==0){
+                    alert("please  chose a suoer hero");
+                }else if(selected.length==1){
+                    alert(` the  best  sper hero is ${selected[0].value}`);
+                }else if(selected.length>1){
+                    let array=[];
+                    for (let index = 0; index < selected.length; index++) {
+                         array[index]=selected[index].value;
+                        
+                    } 
+                    let res='';
+                    array.forEach(element => {
+                        res=res+element+' , ';
+                    });
+
+                    alert(`the Best super heros are ${res}`);
+                }
+
+        }
+        
+    }
+    </script>
+</body>
+
+</html>
