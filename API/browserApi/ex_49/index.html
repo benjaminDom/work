@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form elements event</title>
+</head>
+
+<body>
+    <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+        <input type="text" id="username" name="username" />
+        <input type="password" id="pass" name="pass" />
+        <input type="submit" name="submit" value="Send" />
+    </form>
+
+    <script>
+        window.onload = function () {
+            const form = document.querySelector('form');
+
+
+
+
+            form.onsubmit = (event) => {
+                event.preventDefault();
+                const username = form.elements[0];
+                const password = form.elements[1];
+                /*                console.log(username.value.type); */
+                /* console.log(`this is  username value ${username.value}`); */
+                if ((username.value == '') || (password.value == '')) {
+                    username.classList.add('error');
+                    password.classList.add('error');
+
+                    alert("please enter a user name and passwords");
+                } else {
+                    alert("all is good");
+                }
+            }
+
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

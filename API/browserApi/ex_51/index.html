@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+    <script>
+        window.onload = function () {
+
+            const response = `{
+                "title": "A New Hope",
+                "episode_id": 4,
+                "species": [
+                    "https://images.unsplash.com/photo-1528190336454-13cd56b45b5a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+                    "https://unsplash.com/photos/qph7tJfcDys",
+                    "https://images.unsplash.com/photo-1516992654410-9309d4587e94?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80",
+                    "https://images.unsplash.com/photo-1527212709058-f8b7ffe1deeb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
+                    "https://images.unsplash.com/photo-1511189330313-b0af599a6f5a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80"
+                ]
+            }`;
+            const responseJ = JSON.parse(response);
+
+            let jsonresponse = document.getElementById('jsonresponse');
+            let h1 = document.createElement('h1');
+            let p = document.createElement('p');
+            let ul=document.createElement('ul');
+
+            h1.innerHTML = responseJ.title;
+            p.innerHTML = "episode id :" + responseJ.episode_id;
+            jsonresponse.appendChild(h1);
+            jsonresponse.appendChild(p);
+
+            
+            for (let index = 0; index < responseJ.species.length; index++) {
+                let link = document.createElement('a');
+                link.setAttribute('href', responseJ.species[index]);
+                link.innerHTML = 'this is   link  ' + (index + 1);
+                jsonresponse.appendChild(link);
+                let br=document.createElement('br');
+                jsonresponse.appendChild(br);
+
+
+            }
+
+
+
+            /*            let jsonresponse=document.getElementById('jsonresponse');
+            
+            let link=document.createElement('a');
+            link.classList.href=JavaOb.species[0];
+            let h1=document.createElement('h1');
+            let p=document.createElement('p');
+            h1.innerText=JavaOb.title;
+            
+            p=JavaOb.episode_id;
+            jsonresponse.append(h1);
+            jsonresponse.appendChild(p);
+            jsonresponse.appendChild(link);
+             */
+        }
+    </script>
+</head>
+
+<body>
+    <div id="jsonresponse"></div>
+</body>
+
+</html>
