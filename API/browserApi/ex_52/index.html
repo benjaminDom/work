@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+    <script>
+        window.onload = function () {
+            const apiURL = 'https://swapi.dev/api/films/';
+
+            fetch(apiURL)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    const show = data;
+
+                    console.log("Title:",show.results[0].title);
+                    console.log("episode_id:",show.results[0].title);
+                    /* 
+                    console.log(show.show.premiered); 
+                    console.log(show.show.image.original); */ 
+                });
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="jsonresponse"></div>
+</body>
+
+</html>
