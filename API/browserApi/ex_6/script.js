@@ -6,6 +6,7 @@ if (isAdult) {
 
 }else{
     window.alert(`So so  sad `);
+    
 }
 
 
