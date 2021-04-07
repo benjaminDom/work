@@ -1,0 +1,49 @@
+doctype html
+html(lang='en')
+    head
+        title BENJAMAZON summer clothese
+        meta(charset='UTF-8')
+        meta(name='description' content='BENJAMAZON summer clothes')
+        meta(name='keywords' content='summer clothes')
+        meta(name='author' content='Benjamin J Dominguez')
+        link(rel='stylesheet' type='text/css' href='/css/style2.css')
+        link(href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet')
+        link(rel='shortcut icon' href='images/favicon.ico' type='image/x-icon')
+        
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        script(src='./typed.js-master/lib/typed.min.js')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+
+         
+    body
+      .container   
+        a.btn.btn-primary(href='/') Home
+        h1.text-center Footwear
+        style.
+            .modal-body{
+            background-color: yellow;       
+            }
+            .container{
+                margin-left: 10px;
+            }
+            h1{
+                 font-size: 70px;
+                 font-weight: bold;
+                 color:white;
+            }
+        each product in products
+                .card(style='width: 18rem;')
+                    img.card-img-top(src=product.image alt=product.name)
+                    .card-body
+                        h5.card-title.text-warning=product.name
+                        p.card-text(style=product.color)=product.description
+                        a.btn.btn-info(href='/button'+product.id) Buy
+                        
+                        
+                br        
+        div.container
+            a.btn.btn-primary(href='/done') Done        

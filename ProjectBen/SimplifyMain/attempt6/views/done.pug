@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+    head
+        title BENJAMAZON summer clothese
+        meta(charset='UTF-8')
+        meta(name='description' content='BENJAMAZON summer clothes')
+        meta(name='keywords' content='summer clothes')
+        meta(name='author' content='Benjamin J Dominguez')
+        link(rel='stylesheet' type='text/css' href='/css/style3.css')
+        link(href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet')
+        link(rel='shortcut icon' href='images/favicon.ico' type='image/x-icon')
+        
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        script(src='./typed.js-master/lib/typed.min.js')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+    body 
+       style. 
+            .list-group-item{
+                                background-color:rgba(#{message4.input.r},#{message4.input.g},#{message4.input.b},0.5);
+                                    color:#{message3};
+                            }
+       h1=message3 
+       h1="These are your Items" 
+       div.container
+            ul.list-group 
+                each elem in Buylist 
+                    li.list-group-item='ID:'+elem.id+'Your Product'+elem.name
+
+       div.container
+            a.btn.btn-primary(type='button' href="/footwear") Back
+            a.btn.btn-primary(type='button' href="/clear") clear

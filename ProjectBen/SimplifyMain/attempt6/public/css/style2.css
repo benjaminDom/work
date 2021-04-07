@@ -1,0 +1,33 @@
+body{
+    background: url("https://images.unsplash.com/photo-1505118380757-91f5f5632de0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2081&q=80") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 1000px;
+    width: 100%;
+    position:relative;
+}
+img{
+    width: 350px;
+    height: 300px;
+}
+h1{
+    font-size:xx-large;
+    color: azure;
+}
+h5{
+    color: whitesmoke;
+}
+.card-text{
+    background-color: whitesmoke;
+}
+.card-title{
+    background-color: blue;
+    font-size: medium;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+/* .modal-body{
+    background-color: brown;
+} */
